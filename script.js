@@ -137,7 +137,7 @@ state.current.servers.forEach(function (server) {
       .attr('class', 'server')
       .append(SVG('text')
                  .attr('class', 'serverid')
-                 .text('S' + server.id)
+                 .text('Country' + server.id)
                  .attr(util.circleCoord((server.id - 1) / NUM_SERVERS,
                                         ringSpec.cx, ringSpec.cy, ringSpec.r + 50)))
       .append(SVG('a')
@@ -365,7 +365,7 @@ render.logs = function() {
     logsGroup.append(log);
     log.append(
         SVG('text')
-          .text('S' + server.id)
+          .text('Country' + server.id)
           .attr('class', 'serverid ' + server.state)
           .attr({x: logSpec.x - LABEL_WIDTH*4/5,
                  y: logSpec.y + logSpec.height / 2}));
